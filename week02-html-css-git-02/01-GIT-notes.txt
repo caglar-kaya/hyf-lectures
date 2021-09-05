@@ -1,0 +1,215 @@
+************************************************************************
+git log
+
+git checkout
+
+git revert
+
+***********************************************************************
+
+git config --global user.name "Caglar Kaya"
+git config --global user.email "caglar.kaya.europe@gmail.com"
+
+git config --list
+git config --global user.name
+git config --global user.email
+
+
+git help config
+git config --help
+git add --help
+
+
+git add -A (Add ALL files to staging area)
+git reset calc.py (Remove file from staging area)
+git reset (Remove ALL files from staging area)
+
+
+git clone <url> <where to clone>
+git clone ../remote_repo.git . (. means current directory)
+git clone https://github.com/caglar-kaya/remote_repo.git .
+
+git remote -v
+Result:
+origin  https://github.com/caglar-kaya/deneme.git (fetch)
+origin  https://github.com/caglar-kaya/deneme.git (push)
+
+git branch -a
+Result:
+* main
+  remotes/origin/main
+  remotes/origin/master
+
+git diff (Shows changes made locally)
+
+git pull origin master (Don't forget before pushing because other developers make changes)
+git push origin master
+
+git branch myBranch (Creates a new branch)
+git checkout myBranch (Switches to new branch and after that I make changes on this branch)
+git push -u origin myBranch (After commiting push branch to remote repository)
+
+git checkout master/main
+git pull origin master/main
+git branch --merged (Shows branches merged before)
+git merge myBranch (Merges myBranch to main branch locally)
+git push origin master/main
+
+git branch --merged
+git branch -d myBranch (Deleted branch myBranch on locally)
+git branch (only main stayed)
+git branch -a (still myBranch on remote repository)
+git push origin --delete myBranch (Deleted branch myBranch on remotely)
+
+Example:
+git branch subtract
+git checkout subtract
+	make some changes on files
+git status
+git add -A
+git commit -m "Subtract"
+git push -u origin subtract
+git checkout main
+git pull origin main
+git merge subtract
+git push origin main
+
+***********************************************************************
+
+cd Desktop/07-HYF-Lectures/02-Week2/
+
+mkdir gitdemo
+
+cd gitdemo/
+
+git init (creates a repository)
+
+ls -a
+
+*** explorer .
+
+git status
+
+touch index.html
+
+touch style.css
+
+code .
+
+git status
+
+git add index.html (to add files to a new commit)
+
+git status
+
+git commit -m "Created initial html file" (commit the added files)
+
+git add style.css
+
+git status
+
+git commit -m "Created initial css file"
+
+*** Now we delete index.html and style.css via file explorer
+
+git status
+
+*** git checkout -- index.html (resets a file to how it was in the last commit)
+
+git status
+
+*** git add style.css (This deleted style.css from GIT)
+
+*** (use "git restore --staged <file>..." to unstage)
+
+git status
+
+git commit -m "Remove stylesheet, it was not linked"
+
+git status
+
+git log (shows all commits)
+
+*** git log -p (shows all commits and the content of the files)
+
+***********************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

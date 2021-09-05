@@ -1,0 +1,6 @@
+All
+print
+orientation: landscape
+orientation: portrait
+speech
+only screen

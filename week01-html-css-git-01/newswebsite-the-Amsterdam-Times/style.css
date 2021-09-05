@@ -1,0 +1,64 @@
+body {
+  background-color: #8a7980;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-image: url(images/amsterdam.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+time {
+  color: silver;
+}
+
+article {
+  margin-bottom: 50px;
+  border: silver 1px solid;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
+}
+
+article .text-content {
+  padding: 20px;
+}
+
+article h2 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+article p {
+  line-height: 1.5;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+}

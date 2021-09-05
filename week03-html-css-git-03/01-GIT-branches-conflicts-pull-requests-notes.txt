@@ -1,0 +1,179 @@
+GIT BRANCHES
+
+*** git branch add-image
+
+*** git branch
+
+*** git checkout add-image
+*** git switch add-image
+
+git log
+
+	* Changes files like html, css..
+
+git status
+
+git add .
+
+git status
+
+git commit -m "Added bike image to the homepage"
+
+git status
+
+git log
+
+*** git switch master
+
+git status
+
+git log
+
+git branch add-footer
+
+git checkout add-footer
+
+	* Changes files like html, css..
+
+git status
+
+git add .
+
+git commit -m "Added a simple footer to the homepage"
+
+git status
+
+git log
+
+*** MERGING
+
+git checkout master
+
+*** git merge add-image
+
+git log
+
+git merge add-footer
+
+	* Here got CONFLICT
+	* Update file manually
+
+git status
+
+git add .
+
+git commit
+
+git log
+
+***********************************************************
+
+How to create a pull request?
+
+	Feature on GitHub
+
+	Merge branches
+
+	$ git merge 
+
+	Approve changes
+	Overview of changes
+
+git branch add-border-to-images
+
+git switch add-border-to-images
+
+code .
+
+	changes files on this branch
+
+git add .
+
+git commit -m "added border to images"
+
+*** (I didn't merge locally before pushing)
+
+git push
+
+fatal: The current branch add-border-to-images has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin add-border-to-images
+
+	Compare & pull request
+	OR
+	Pull requests > new pull request
+	Merge into "main" from "add-border-to-images"
+
+git pull
+
+*****************************************************************************
+
+Git Tutorial 6: Branches (Create, Merge, Delete a branch)
+
+git branch
+
+git branch thirsty
+
+git checkout thirsty
+
+	make changes on thirsty branch (2 commits)
+
+git checkout master
+
+	make changes on master branch (1 commits)
+
+git merge thirsty (Here merging is finished)
+
+	Update GitHub
+
+git pull
+
+git push
+
+	Push thirsty branch into GitHub
+
+git checkout thirsty
+
+git push --set-upstream origin thirsty
+
+	Deleting a Branch
+
+git checkout -b dummy
+(creates AND checkout to dummy branch at the same time)
+(-b means branch)
+
+git branch
+
+git checkout master/main
+
+git branch -d dummy
+(-d means delete)
+
+*********************************************************
+Introduction to Git - Branching and Merging
+
+git log --all --decorate --oneline --graph
+
+alias graph="git log --all --decorate --oneline --graph"
+
+graph
+
+git branch --merged
+
+$ git branch -d add-image
+Deleted branch add-image (was d72619c).
+
+$ git branch -d add-footer add-border-to-images
+Deleted branch add-footer (was 7a53b10).
+Deleted branch add-border-to-images (was f35d57a).
+
+*****************************************************
+
+
+
+
+
+
+
+

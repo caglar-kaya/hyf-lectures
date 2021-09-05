@@ -1,0 +1,89 @@
+	
+	STEP #1:
+Fork original to personal
+
+HackYourHOMEWORK/Javascript1 (be sure to be on the right place)
+
+Fork into my account (just click fork buttton)
+
+	STEP #2:
+Clone fork to localhost(to my Laoptop)
+
+git clone <url> (https or SSH(recomended))
+
+	STEP #3:
+Make branches for each week
+
+cd <path to JavaScript1>
+
+git status (I need to be on master branch)
+
+git branch caglarkaya-w1
+
+git branch
+
+git branch caglarkaya-w2
+git branch caglarkaya-w3
+
+git branch
+
+	STEP #4:
+Do homework (on the RIGHT BRANCH)
+
+git switch caglarkaya-w1
+
+git branch
+
+cd pathTo/Week1
+
+mkdir homework
+
+touch exercise1.js
+
+Completed the homework!
+
+	STEP #5:
+Commit homework + push to fork
+
+git add .
+
+git status
+
+git commit -m "Added homework folder and created exercise file"
+
+git push origin master/main
+
+go to my own fork and check for caglarkaya-w1 branch
+
+	STEP #6:
+Make a pull request to original
+
+on my fork, need to be on caglarkaya-w1 branch
+
+click New pull request button
+
+	into : HackYourHomewrok/JavaScript1 branch : master
+	from : MyOwnFork/JavaScript1 branch : caglarkaya-w1
+
+Title : Caglar Kaya - Week 1 (Added homework folder and created exercise file)
+
+click Create pull request
+
+	STEP #7:
+Do victory dance! :)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

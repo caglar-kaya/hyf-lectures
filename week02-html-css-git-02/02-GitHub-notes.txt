@@ -1,0 +1,118 @@
+ssh-keygen -t ed25519 -C "caglar.kaya.europe@gmail.com"
+
+(Didn't work for me!) cat .ssh/id_rsa.pub
+
+Your public key has been saved in /c/Users/User/.ssh/id_ed25519.pub
+
+cat /c/Users/User/.ssh/id_ed25519.pub
+
+***********************************************************************
+
+cd Desktop/07-HYF-Lectures/02-Week2/
+
+ls
+
+*** git clone https://github.com/HackYourFuture/HTML-CSS.git
+(Download an excisting Remote/Online repository to my PC for the first time)
+
+cd HTML-CSS/
+
+git status
+
+ls
+
+code .
+
+	in README.md in line 5 I added  - Caglar Kaya
+
+git status
+
+git add .
+
+git status
+
+git commit -m "Changed the title of the README.md"
+
+git status
+
+************************************************
+
+cd Desktop/gitdemo/
+
+	create a new remote repository to push an existing local repository
+
+git remote add origin https://github.com/caglar-kaya/deneme.git
+
+git push -u origin master
+
+Result : 1 branch in MASTER
+
+********************************************************
+
+cd Desktop/gitdemo/
+
+	create a new remote repository to push an existing local repository
+
+git remote add origin https://github.com/caglar-kaya/deneme.git
+
+git branch -M main
+
+git push -u origin main
+
+Result : 1 branch in MAIN
+
+*************************************************************
+
+code .
+
+	changed index.html and saved
+
+git status
+
+git add index.html
+
+git commit -m "added a paragraph"
+
+	added README.md file
+
+git status
+
+git add README.md
+
+git status
+
+git commit -m "Added a readme file"
+
+git status
+
+*** git push 
+(Uploads commits to a Remote/Online repository)
+
+*************************************************************
+
+	on GitHub add/change something and update local repository
+
+	on GitHub 6 commits - on local repo 5 commits
+
+*** git pull 
+(Downloads commits from a Remote/Online repository)
+
+	on GitHub 6 commits - on local repo 6 commits
+
+********************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+
+* Commit Changes Seperately
+
+* 1 Changing - 2 Commit
+
+	in VS Code
+	Stage Selected Ranges
+
+==============
+
+git status
+
+git diff
+
+git diff --staged
+
+=====================
+
+(YOK!) git add . (Stage Selected Ranges den dolayi!)
+
+git commit -m "Added footer"
+
+==============================
+
+git status
+
+git add .
+
+git commit -m "Adjust card images sizes"
+
+=============================================
+
+git log -p
+
+======================

@@ -1,0 +1,120 @@
+LINK RELATED
+
+:link
+:visited
+:hover
+:active
+	LoVe HAte
+*********************************************************
+INPUT & LINK RELATED
+
+:focus
+:target
+:enabled
+:disabled
+:checked
+:indeterminate
+:required
+:optional
+:read-only
+:read-write
+********************************************************
+POSITION/NUMBER-BASED
+
+:root
+:first-child
+:last-child
+:nth-child()
+:nth-of-type()
+:first-of-type
+:last-of-type
+:nth-last-of-type()
+:nth-last-child()
+:only-of-type
+********************************************************
+RELATIONAL
+
+:not() (ex: div:not(.music))
+:empty
+********************************************************
+TEXT-RELATED
+
+::first-letter
+::first-line
+:lang
+
+*********************************************************
+CONTENT-RELATED
+
+::before
+::after
+
+*********************************************************
+
+:: means pseudo element (selects some actual CONTENT)
+:  means pseudo selector (selects ELEMENTS in certain conditions)
+
+*********************************************************
+p:hover {
+  color: rebeccapurple;
+  font-weight: 900;
+}
+
+input:required {
+  border: 3px solid #333;
+}
+
+input:optional {
+  font-size: 3rem;
+  margin: 3rem;
+}
+
+input:checked {
+  margin: 2rem;
+}
+
+p:last-of-type {
+  font-size: 2rem;
+  color: red;
+}
+
+p:last-of-type:hover {
+  font-size: 2rem;
+  color: rebeccapurple;
+}
+
+br:empty {
+  line-height: 2rem;
+}
+
+p::selection {
+  background-color: gold;
+  color: hotpink;
+}
+
+p::first-letter {
+  font-size: 3rem;
+}
+
+p::first-line {
+  color: lawngreen;
+}
+
+p::before {
+  content: "🍅";
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+p::after {
+  content: "🍄";
+  padding-left: 10px;
+  padding-right: 10px;
+}
+********************************************************
+
+
+
+
+
+

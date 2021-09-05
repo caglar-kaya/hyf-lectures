@@ -1,0 +1,39 @@
+display: flex;
+flex-grow: 0;
+flex-shrink: 0;
+flex-basis: 300px;
+flex-direction: row, column;
+justify-content: flex-start (Default), flex-end, center, space-around, space-between, space-evenly;
+align-items: stretch (Default), flex-start, flex-end, center
+flex-wrap: nowrap (Default), wrap;
+align-self: flex-start;
+flex: 1;
+/* flex-grow, flex-shrink, flex-basis */
+flex: 1;
+flex: 1 1 1;
+flex: 0 1 1;
+flex: 1 1 200px;
+
+flex-grow: 0 (Default) ;
+flex-shrink: 1 (Default);
+flex-basis: 1;
+}
+.item1 {
+   order: 0 (Default) 3 ;
+}
+
+.item2 {
+   order: 0 (Default) 5;
+}
+
+.item3 {
+   order: 0 (Default) -1;
+}
+
+item3 < item1 < item2
+
+
+
+
+
+
