@@ -1,5 +1,5 @@
-          // VARIABLES & DATA TYPES
-/* 
+// VARIABLES & DATA TYPES
+/*
 var life = 100; // This is my life bar
 
 life = 70;
@@ -8,13 +8,11 @@ life = life - 20;
 
 var myName = 'Caglar'; // This is the name displayed in the game
 
-
 console.log('Hello World');
 
 console.log(life);
 
 console.log(myName);
-
 
 const myAge = 32;
 
@@ -22,14 +20,12 @@ const myAge = 32;
 
 // const myAge = 25; // gives error!
 
-
 let mySurname = 'Kaya';
-
 
 console.log(mySurname);
 */
 
-          // FUNCTIONS & PARAMETERS
+// FUNCTIONS & PARAMETERS
 
 /*
 const myName = 'Caglar';
@@ -49,12 +45,11 @@ const toUpper_2 = (text) => { // 2. way
 toUpper_2(myName);
 */
 
-          // STRING CONCATENATION
+// STRING CONCATENATION
 
 /* console.log('Hello It\'s me Caglar'); // 1. way
 
 console.log("Hello It's me Caglar"); // 2. way
-
 
 const myName = 'Caglar';
 
@@ -66,13 +61,11 @@ console.log("Hello it's me " + myName + " and my age is " + myAge + " and I'm ge
 
 console.log(`Hello it's me ${myName} and my age is ${myAge} and I'm getting old.`);
 
-
 const combined_1 = myName + myAge;
 
 console.log(combined_1);
 
 console.log(typeof combined_1);
-
 
 const combined_2 = myAge + myName;
 
@@ -81,7 +74,7 @@ console.log(combined_2);
 console.log(typeof combined_2);
 */
 
-          // IF ELSE STATEMENTS
+// IF ELSE STATEMENTS
 
 const myAge = 33;
 /*
@@ -94,7 +87,7 @@ if (myAge > 40) {
 }
 */
 
-          // ARRAYS
+// ARRAYS
 /*
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -103,7 +96,6 @@ console.log(days);
 console.log(days[0]);
 
 console.log(days[days.length - 1]);
-
 
 days.pop(); // removes the last element
 
@@ -121,7 +113,6 @@ days.push('Last'); // adds element to last index
 
 console.log(days);
 
-
 const wed = days.indexOf('Wednesday');
 
 console.log(wed);
@@ -129,7 +120,7 @@ console.log(wed);
 console.log(days[wed]);
 */
 
-          // OBJECTS AND KEYWORD THIS
+// OBJECTS AND KEYWORD THIS
 
 /*
 const user = {
@@ -165,7 +156,7 @@ sayMyAge();
 
 */
 
-          // FOR LOOP AND WHILE LOOP
+// FOR LOOP AND WHILE LOOP
 /*
 const names = ['Ed', 'John', 'Maria', 'Eliza', 'Burrito', 'Harry', 'Potter'];
 
@@ -208,19 +199,19 @@ do {
 console.log(j);
 */
 
-          // DOM MANIPULATION
+// DOM MANIPULATION
 
 // const element = document.querySelector('.title');
 
-  // console.log(typeof element); // object
-  // console.log(element); // <h1 class="title">Hello</h1>
-  // console.log(element.textContent); // Hello
+// console.log(typeof element); // object
+// console.log(element); // <h1 class="title">Hello</h1>
+// console.log(element.textContent); // Hello
 
 // const btn = document.querySelector('.changeColor');
 
-  // console.log(typeof btn); // object
-  // console.log(btn); // <button class="changeColor">Click me</button>
-  // console.log(btn.textContent); // Click me
+// console.log(typeof btn); // object
+// console.log(btn); // <button class="changeColor">Click me</button>
+// console.log(btn.textContent); // Click me
 
 // element.style.color = 'red';
 // element.style.backgroundColor = 'green';
@@ -250,15 +241,10 @@ const addListBtn = document.querySelector('.add-list');
 
 // console.log(addListBtn);
 
-addListBtn.addEventListener('click', function() {
-  const newLi = document.createElement("LI");
+addListBtn.addEventListener('click', () => {
+  const newLi = document.createElement('LI');
   const liContent = document.createTextNode(listInput.value);
   newLi.appendChild(liContent);
   userList.appendChild(newLi);
-  listInput.value = "";
+  listInput.value = '';
 });
-
-
-
-
-
