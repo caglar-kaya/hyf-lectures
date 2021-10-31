@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 1</title>
+    <link rel="stylesheet" href="./dom.css" />
+  </head>
+  <body>
+    <!-- HTML Attribute -->
+    <input value="Click me 1" onclick="alert('Click!')" type="button" />
+    <hr />
+    <!-- HTML Attribute -->
+    <input type="button" onclick="countRabbits()" value="Count rabbits!" />
+    <hr />
+    <!-- DOM Property -->
+    <input id="element" type="button" value="Click me 2" />
+    <hr />
+    <!-- DOM Property -->
+    <input
+      type="button"
+      id="element2"
+      onclick="alert('Before')"
+      value="Click me 3"
+    />
+    <hr />
+    <!-- HTML Attribute -->
+    <button onclick="alert(this.innerHTML)">Click me 4</button>
+    <hr />
+    <!-- DOM Property -->
+    <input type="button" id="element3" value="Click me 5" />
+    <hr />
+    <!-- HTML Attribute -->
+    <input type="button" id="button" onclick="sayThanks()" value="Click me 6" />
+    <hr />
+    <!-- Methods in JavaScript File -->
+    <input id="element4" type="button" value="Click me 7" />
+    <hr />
+    <input type="button" value="Click me 8" id="element5" />
+    <hr />
+    <input type="button" onclick="alert(event.type)" value="Event type" />
+    <hr />
+    <button id="element6">Click me 9</button>
+    <hr />
+    <button id="element7">Click me 10</button>
+    <hr />
+    <button id="element8">Click me 11</button>
+    <hr />
+
+    <script>
+      function countRabbits() {
+        for (let i = 1; i <= 3; i++) {
+          alert('Rabbit number ' + i);
+        }
+      }
+      function sayThanks() {
+        alert('Thanks!');
+      }
+      element.onclick = function () {
+        alert('Thank you');
+      };
+      element2.onclick = function () {
+        // overwrites the existing handler
+        alert('After'); // only this will be shown
+      };
+      element3.onclick = sayThanks; // sayThanks() wrong!
+
+      // will never run
+      // only work with addEventListener
+      document.onDOMContentLoaded = function () {
+        alert('DOM built');
+      };
+
+      // this way it works
+      document.addEventListener('DOMContentLoaded', function () {
+        alert('DOM built');
+      });
+
+      element5.onclick = function (event) {
+        // show event type, element and coordinates of the click
+        alert('Event: ' + event.type + ' at ' + event.currentTarget);
+        alert(
+          'Coordinates => ' +
+            'X: ' +
+            event.clientX +
+            ' and Y: ' +
+            event.clientY,
+        );
+      };
+
+      let obj = {
+        handleEvent(event) {
+          alert(event.type + ' at ' + event.currentTarget);
+        },
+      };
+      element6.addEventListener('click', obj);
+
+      class Menu {
+        handleEvent(event) {
+          switch (event.type) {
+            case 'mousedown':
+              element7.innerHTML = 'Mouse button pressed';
+              break;
+            case 'mouseup':
+              element7.innerHTML += '...and released.';
+              break;
+          }
+        }
+      }
+      let menu = new Menu();
+      element7.addEventListener('mousedown', menu);
+      element7.addEventListener('mouseup', menu);
+
+      class Menu2 {
+        handleEvent(event) {
+          // mousedown -> onMousedown
+          let method = 'on' + event.type[0].toUpperCase() + event.type.slice(1);
+          this[method](event);
+        }
+
+        onMousedown() {
+          element8.innerHTML = 'Mouse button pressed';
+        }
+
+        onMouseup() {
+          element8.innerHTML += '...and released.';
+        }
+      }
+
+      let menu2 = new Menu2();
+      element8.addEventListener('mousedown', menu2);
+      element8.addEventListener('mouseup', menu2);
+    </script>
+
+    <script src="./dom.js"></script>
+  </body>
+</html>
