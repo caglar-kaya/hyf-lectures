@@ -46,6 +46,15 @@ const server = http.createServer((req, res) => {
   //   res.end(JSON.stringify(users));
   // }
   // Build file path
+  let filePath = path.join(
+    __dirname,
+    'public',
+    req.url === '/' ? 'index.html' : req.url,
+  );
+
+  console.log(filePath);
+
+  res.end();
 });
 
 const PORT = process.env.PORT || 5000;
