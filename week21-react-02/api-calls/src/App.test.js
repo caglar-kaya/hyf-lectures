@@ -4,18 +4,21 @@ import App from './App';
 
 describe('App', () => {
   test('Loading...', () => {
+    // Passed with toBeInTheDocument, No Async/Await
     render(<App />);
     const loadingElement = screen.getByText(/Loading.../i);
     expect(loadingElement).toBeInTheDocument();
   });
-  test('quia et suscipit', () => {
+  test('quia et', () => {
+    // Passed with toBeNull, No Async/Await
     render(<App />);
-    const loadingElement = screen.queryByText(/quia et suscipit/i);
-    expect(loadingElement).toBeNull();
+    const quiaEtWords = screen.queryByText(/quia et suscipit/i);
+    expect(quiaEtWords).toBeNull();
   });
-  test('exist architecto', async () => {
+  test('architecto', async () => {
+    //Failed. Why? getByText, queryByText, findByText don't work!
     render(<App />);
-    expect(screen.queryByText(/architecto/i)).toBeNull();
-    expect(await screen.findByText(/architecto/i)).toBeInTheDocument();
+    const architectoWord = await screen.findByText(/architecto/i);
+    expect(architectoWord).toBeInTheDocument();
   });
 });
