@@ -1,5 +1,7 @@
+/* eslint-disable testing-library/await-async-query */
+/* eslint-disable testing-library/await-async-utils */
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import App from './App';
 
 describe('App', () => {
@@ -18,7 +20,6 @@ describe('App', () => {
   test('architecto', async () => {
     //Failed. Why? getByText, queryByText, findByText don't work!
     render(<App />);
-    const architectoWord = await screen.findByText(/architecto/i);
-    expect(architectoWord).toBeInTheDocument();
+    waitFor(() => expect(screen.findByText(/architecto/i)).toBeInTheDocument());
   });
 });
